@@ -20,10 +20,22 @@ import os
 import re
 import logging
 
+import os, errno
+
+
+def mkdir_p(path):
+    try:
+        os.makedirs(path)
+    except OSError as exc: # Python >2.5
+        if exc.errno == errno.EEXIST and os.path.isdir(path):
+            pass
+        else: raise
+
 ##########################################################################
 # Core Err configuration                                                 #
 ##########################################################################
 
+mkdir_p('data')
 BOT_DATA_DIR = 'data'
 BOT_EXTRA_PLUGIN_DIR = 'plugins'
 BOT_LOG_FILE = None
