@@ -1,0 +1,9 @@
+[Core]
+Name = Web
+Module = web
+
+[Documentation]
+Description = Extends the built-in Webserver to be more 12 factor.
+
+[Python]
+Version = 3

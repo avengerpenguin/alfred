@@ -1,0 +1,9 @@
+[Core]
+Name = Trello
+Module = trello
+
+[Documentation]
+Description = Lists Trello cards
+
+[Python]
+Version = 3
