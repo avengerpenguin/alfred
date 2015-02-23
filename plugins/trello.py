@@ -1,5 +1,6 @@
 from errbot import BotPlugin, botcmd
 
+
 class Trello(BotPlugin):
 
     @botcmd
