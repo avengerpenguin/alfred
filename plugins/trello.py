@@ -19,11 +19,11 @@ class Trello(BotPlugin):
                 yield card
 
     @botcmd
-    def top(self, _, _):
+    def top(self, _msg, _args):
         cards = itertools.islice(self.kanban_walker(), 5)
         return '\n'.join([card.get_card_information()['name'] for card in cards])
 
 
     @botcmd
-    def hello(self, _, _):
+    def hello(self, _msg, _args):
         return "Hello, world!"
